@@ -1,8 +1,8 @@
 #pragma once
 #include <cstddef>
 #include <cstdint>
-#include "Unit.h"
 #include <vector>
+#include "Unit.h"
 
 // TILE TABLE:
 // 0x00: null
@@ -18,6 +18,7 @@ public:
 	World();
 	World(uint32_t width, uint32_t height);
 	uint8_t GetTile(uint32_t x, uint32_t y);
+	void SetTiles(uint32_t x, uint32_t y, uint8_t value);
 	void SpawnPerson(Unit unit);
 	void Step();
 private:

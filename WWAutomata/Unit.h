@@ -2,6 +2,8 @@
 #include <cstdint>
 #include <stdlib.h>
 
+class World;
+
 class Unit {
 public:
 	uint32_t posX;
@@ -12,5 +14,5 @@ public:
 	uint16_t strength;
 
 	Unit();
-	void Step();
+	void Step(World* world);
 };
